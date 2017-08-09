@@ -1,0 +1,6 @@
+{
+  "name": "mytasks",
+  "dependencies": {
+    "firebase": "^2.1.0"
+  }
+}

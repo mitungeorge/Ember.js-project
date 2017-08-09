@@ -4,7 +4,9 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'mytasks',
-    environment,
+    environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://embertasks-a835f.firebaseio.com',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -23,6 +25,17 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+//   var ENV = {
+//     firebase: {
+//   apiKey: "AIzaSyCm6zWqZOEGf7Rnum7V4MazEAltAv_QT2g",
+//   authDomain: "embertasks-a835f.firebaseapp.com",
+//   databaseURL: "https://embertasks-a835f.firebaseio.com",
+//   projectId: "embertasks-a835f",
+//   storageBucket: "embertasks-a835f.appspot.com",
+//   messagingSenderId: "1071581375009"
+// }
+// };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
